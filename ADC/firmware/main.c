@@ -7,9 +7,8 @@
 
 void rs_puts(char *st)  //文字列を一文字ずつに変換して送信
 {
-    while (*st != '\0') {
+    while (*st) {
         uart0_putc(*st);
-        st++;
 
     }
 }
@@ -25,11 +24,8 @@ int main()
 	//main loop
 	for(;;)
 	{
-        
-
-
-        
-        sprintf(foo,"%d\n\r",piyo);//intを文字列にして代入
+                
+        sprintf(foo,"piyo\r\n");//intを文字列にして代入
         rs_puts(foo);	//文字列送信
         _delay_ms(10);
 		PORTD^=1<<6;//Toggle LED

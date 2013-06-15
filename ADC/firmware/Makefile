@@ -19,7 +19,7 @@
 
 DEVICE     = atmega328p
 CLOCK      = 1000000
-PROGRAMMER = -c ft232r1 -C /usr/local/CrossPack-AVR/etc/avrdude.conf -B 11250
+PROGRAMMER = -c ft232r1 -C /usr/local/CrossPack-AVR/etc/avrdude.conf -B 9600
 OBJECTS    = main.o
 FUSES      =　-U lfuse:w:0x62:m -U hfuse:w:0xd9:m -U efuse:w:0x07:m 
 
