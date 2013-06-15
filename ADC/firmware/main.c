@@ -26,7 +26,7 @@ int main()
 	for(;;)
 	{
                 
-        sprintf(foo,"piyo\r\n");//intを文字列にして代入
+        sprintf(foo,"%d \r\n",piyo);//intを文字列にして代入
         rs_puts(foo);	//文字列送信
         _delay_ms(10);
 		PORTD^=1<<6;//Toggle LED
