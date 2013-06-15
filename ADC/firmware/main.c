@@ -7,8 +7,9 @@
 
 void rs_puts(char *st)  //文字列を一文字ずつに変換して送信
 {
-    while (*st) {
+    while (*st != '\0') {
         uart0_putc(*st);
+        st++;
 
     }
 }
