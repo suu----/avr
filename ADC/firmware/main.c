@@ -25,13 +25,16 @@ int main()
 	sei();	//uart0受信割り込み有効化のためグローバル割り込み有効
 	int piyo = 100;
 	char foo[64];
+	unsigned char bar;
 	
 	//main loop
 	for(;;)
 	{
 		
-		sprintf(foo,"%d\n",piyo);//intを文字列にして代入
-		rs_puts(foo);	//文字列送信
+	//	sprintf(foo,"%d\n",piyo);//intを文字列にして代入
+	// 	rs_puts(foo);	//文字列送信
+		bar = 'a';
+		uart0_putc(bar);
 		_delay_ms(100);
 		PORTD^=1<<6;//Toggle LED
 
