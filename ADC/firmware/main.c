@@ -43,16 +43,22 @@ int main()
 	for(;;)
 	{
 <<<<<<< HEAD
+<<<<<<< HEAD
                 
         //sprintf(foo,"%d \r\n",piyo);//intを文字列にして代入
         //rs_puts(foo);	//文字列送信
         uart0_putc('a');
         _delay_ms(1000);
 =======
+=======
+>>>>>>> 3f296686149c535c3cd6ff1207599052306d168f
 		
 		sprintf(foo,"%d\n\r",piyo);//intを文字列にして代入
 	 	rs_puts(foo);	//文字列送信
 		_delay_ms(100);
+<<<<<<< HEAD
+>>>>>>> 3f296686149c535c3cd6ff1207599052306d168f
+=======
 >>>>>>> 3f296686149c535c3cd6ff1207599052306d168f
 		PORTD^=1<<6;//Toggle LED
 
